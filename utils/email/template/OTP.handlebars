@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <style>
+        .otp {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 3.2rem;
+        }
+        .valid {
+            color: red;
+            font-size: 0.6rem;
+        }
+        span{
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Hi, <span>{{email}}</span></p>
+    <p>Here is your <strong>One Time Password</strong> to verify your account</p>
+    <p class="otp"> {{oneTimePin}}</p>
+    <p class="valid">Valid only for 15 minutes</p>
+
+</body>
+
+</html>
