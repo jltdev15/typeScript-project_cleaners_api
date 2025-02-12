@@ -1,9 +1,9 @@
 import express, { Request, Response, NextFunction } from 'express';
-import passport from '../config/PassportSetup';
-import AuthController from '../controllers/Auth/AuthController';
-import AuthMiddleware from '../middlewares/authMiddleware';
-import ValidationChecker from '../middlewares/ValidationMiddleware';
-import AccountController from '../controllers/User/AccountController';
+import passport from '../../config/PassportSetup';
+import AuthController from '../../controllers/Auth/AuthController';
+import AuthMiddleware from '../../middlewares/authMiddleware';
+import ValidationChecker from '../../middlewares/ValidationMiddleware';
+import AccountController from '../../controllers/User/AccountController';
 
 const router = express.Router();
 
@@ -26,10 +26,8 @@ router.get('/auth/google/callback', passport.authenticate('google', {
 
 // Facebook auth routes
 
-router.get(
-    '/auth/facebook',
-    passport.authenticate('facebook', { profileFields: ['displayName', 'email', 'photos'] })
-  );
+// @ts-ignore
+router.get( '/auth/facebook',  passport.authenticate('facebook', { profileFields: ['displayName', 'email', 'photos'] }));
   
 router.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/' }), (req: Request, res: Response) => {
     res.redirect('http://localhost:5173/dashboard')

@@ -25,7 +25,7 @@ interface CompleteProfilePayload {
 
 class AccountService {
   async createUser(payload: CreateUserPayload): Promise<{ email: string }> {
-    const hashedPassword = await bcrypt.hash(payload.password, 12);
+    const hashedPassword = await bcrypt.hash(payload.password, 10);
 
     const newUser = new User({
       email: payload.email,

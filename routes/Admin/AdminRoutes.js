@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const adminUserController = require("../controllers/Admin/UserManagementController");
-const adminBookingController = require("../controllers/Admin/BookingManagementController");
-const adminServiceController = require("../controllers/Admin/ServiceManagementController")
+const adminUserController = require("../../controllers/Admin/UserManagementController");
+const adminBookingController = require("../../controllers/Admin/BookingManagementController");
+const adminServiceController = require("../../controllers/Admin/ServiceManagementController")
 //User management
 // router.post("/createAdmin", adminController.createAdmin);
 

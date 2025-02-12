@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const bookingController = require('../controllers/User/BookingController');
-const authMiddleware = require('../middlewares/authMiddleware');
-const rateLimiter = require('../middlewares/rateLimiterMiddleware');
+const bookingController = require('../../controllers/User/BookingController');
+const authMiddleware = require('../../middlewares/authMiddleware');
+const rateLimiter = require('../../middlewares/rateLimiterMiddleware');
 
 router.post(
     '/bookService',
